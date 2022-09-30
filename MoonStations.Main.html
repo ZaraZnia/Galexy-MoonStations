@@ -24,12 +24,22 @@ $(document).ready(function(){
 </script>
 </head>
 
-<body onload="OnDocumentLoad()">   
-    <!-- <p Id="pGrgrnDate" class="White"></p> -->
-    <p Id="pCnstltn" class="White"></p>
-    <figure class="spin" onclick="setTimeout(para2, 1000);">      
-        <img ID = "Zodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" onclick="spin()" alt="Error in Image Loading." >
-    </figure>    
+<body onload="OnDocumentLoad()">  
+    <div id="body">
+        <div id="left">
+            <p Id="pGrgrnDate" class="White"></p>
+            
+        </div>
+        <div id="main">
+            <p Id="pCnstltn" class="White"></p>
+            <figure class="spin" onclick="setTimeout(para2, 1000);">      
+                <img ID = "Zodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" onclick="spin()" alt="Error in Image Loading." >
+            </figure> 
+        </div>
+        <div id="right">
+            <p id="pPersianDate" class="White"></p>
+        </div>
+    </div>   
 </body>
 
 </html>

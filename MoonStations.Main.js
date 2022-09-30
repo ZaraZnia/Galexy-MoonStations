@@ -13,7 +13,6 @@ function OnDocumentLoad(){
 //        console.log(num_spin + " - " + num_spin*30)
 
     $('.spin>img').addClass('para1');
-
 }
 
 const para2 = () =>{
@@ -43,8 +42,24 @@ const para2 = () =>{
 }
 
 
+function GetGerigorianDate(){
+
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    const d = new Date();
+    let day = d.getDate();
+    let weekDay = days[d.getDay()];
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return weekDay + ' ' + day + ' ' + month + ' ' + year;
+}
+
 function SetGerigorianDate(){
-    const nowDate = new Date();
-    var pElement = document.getElementById("gDate");
-    pElement.innerHTML = nowDate;
+
+    let gDate = GetGerigorianDate();
+    let pElement = document.getElementById("pGrgrnDate");
+    pElement.innerHTML = gDate;
 }
