@@ -3,10 +3,50 @@ let num_case
 
 function OnDocumentLoad(){
     SetGerigorianDate();
-
+    SetPersianDate();
+    SetMoonPosition();
 }
 
+function SetMoonPosition(){
+    var data = ReadDataFromExcel();
+}
 
+function ReadDataFromExcel(){
+    fileReader.readAsBinaryString(file);
+}
+
+function GetGerigorianDate(){
+
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    const d = new Date();
+    let day = d.getDate();
+    let weekDay = days[d.getDay()];
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return weekDay + ' ' + day + ' ' + month + ' ' + year;
+}
+
+function SetGerigorianDate(){
+
+    let gDate = GetGerigorianDate();
+    SetElementInnerText("pGrgrnDate", gDate);
+}
+
+function SetPersianDate(){
+
+    let pDate = "تاریخ روز:";
+    SetElementInnerText("pPersianDate", pDate);
+}
+
+function SetElementInnerText(elementId, innerValue){
+
+    let pElement = document.getElementById(elementId);
+    pElement.innerHTML = innerValue;
+}
  const spin = () =>{
     num_case = Math.floor((Math.random()*12)+1)
      num_spin = num_case
@@ -41,25 +81,3 @@ const para2 = () =>{
     
 }
 
-
-function GetGerigorianDate(){
-
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    const d = new Date();
-    let day = d.getDate();
-    let weekDay = days[d.getDay()];
-    let month = months[d.getMonth()];
-    let year = d.getFullYear();
-
-    return weekDay + ' ' + day + ' ' + month + ' ' + year;
-}
-
-function SetGerigorianDate(){
-
-    let gDate = GetGerigorianDate();
-    let pElement = document.getElementById("pGrgrnDate");
-    pElement.innerHTML = gDate;
-}

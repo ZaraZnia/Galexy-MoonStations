@@ -8,12 +8,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../Galexy-MoonStations/Styles/MoonStations.Main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../Galexy-MoonStations/Styles/MoonStations.Spin.css'>
-    <!-- <script language="JavaScript" type="text/javascript" src="../Galexy-MoonStations/js/jquery-3.4.1.min.js"></script> -->
-    <!-- <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
-    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script> -->
-    
+   
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <Script Language="JavaScript" Src="dateScript.js" mce_Src="dateScript.js"></Script>
+    <!-- <Script Language="JavaScript" Src="../Galexy-MoonStations/Resources/dateScript.js" mce_Src="dateScript.js"></Script> -->
     <script src='MoonStations.Main.js'></script>
 <script>
 $(document).ready(function(){
@@ -24,22 +21,25 @@ $(document).ready(function(){
 </script>
 </head>
 
-<body onload="OnDocumentLoad()">  
-    <div id="body">
-        <div id="left">
-            <p Id="pGrgrnDate" class="White"></p>
-            
+<body onload="OnDocumentLoad()">
+    <div id="dvMain">
+        <div id="dvGDate" class="Left">
+            <p Id="pGrgrnDate" class="white Left"></p>            
         </div>
-        <div id="main">
+        <div id="dvPDate" class="Right">
+            <p id="pPersianDate"  class="white Right"></p>
+        </div>
+        <div id="dvMoonPos">
+            <p id="pMoonPos" class="white"></p>
+        </div>
+        <div id="dvZodiac">
             <p Id="pCnstltn" class="White"></p>
             <figure class="spin" onclick="setTimeout(para2, 1000);">      
-                <img ID = "Zodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" onclick="spin()" alt="Error in Image Loading." >
+                <img id = "imgZodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" onclick="spin()" 
+                     alt="Error in Image Loading." >
             </figure> 
         </div>
-        <div id="right" class="right">
-            <p id="pPersianDate" class="White"></p>
-        </div>
-    </div>   
-</body>
+    </div>
+<body>
 
 </html>

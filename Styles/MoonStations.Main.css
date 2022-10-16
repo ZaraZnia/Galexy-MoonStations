@@ -17,16 +17,30 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 55%;
+    height: 55%;
+}
+
+.white{
+    color: white;
+}
+div.Left{
+    position: relative; 
     width: 50%;
-    height: 50%;
 }
-
-.whiteLeft{
-    color: white;
+p.Left{
+     
     text-align: left;
+    margin-top: 50px;
+    margin-left: 10px;
 }
-
-.whiteRight{
-    color: white;
+div.Right{
+    position: fixed;
+    width: 50%;   
+}
+p.Right{
+   
     text-align: left;
+    margin-top: 50px;
+    margin-right: 10px;
 }
