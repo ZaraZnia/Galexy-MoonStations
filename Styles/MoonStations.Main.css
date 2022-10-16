@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    /* height: 100vh; */
+    height: 100vh; 
 }
 *{
     margin: 10;
@@ -21,6 +21,12 @@ body {
     height: 50%;
 }
 
-.White{
+.whiteLeft{
     color: white;
+    text-align: left;
+}
+
+.whiteRight{
+    color: white;
+    text-align: left;
 }
