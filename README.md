@@ -1,2 +1,2 @@
 # Galexy-MoonStations
-obsolete - Changing Design
+Changing Design
