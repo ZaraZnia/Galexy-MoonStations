@@ -8,38 +8,37 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../Galexy-MoonStations/Styles/MoonStations.Main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../Galexy-MoonStations/Styles/MoonStations.Spin.css'>
-   
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- <Script Language="JavaScript" Src="../Galexy-MoonStations/Resources/dateScript.js" mce_Src="dateScript.js"></Script> -->
-    <script src='MoonStations.Main.js'></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        alert("jQuery is working perfectly.");
-    });      
-});
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
+    <script type="text/javascript"  language="javascript" src="Resources\CalendarData.js"></script>
+    <!-- <script src='Tools Script\ExcelReader.js'></script> -->
+    <script src='MoonStations.Main.js'></script>    
 </head>
 
 <body onload="OnDocumentLoad()">
-    <div id="dvMain">
+    <div id="dvMain">        
         <div id="dvGDate" class="Left">
-            <p Id="pGrgrnDate" class="white Left"></p>            
+            <p Id="pGrgrnDate" class="white Left"></p>
         </div>
         <div id="dvPDate" class="Right">
-            <p id="pPersianDate"  class="white Right"></p>
+            <p id="pPersianDate" class="white Right"></p>
         </div>
-        <div id="dvMoonPos">
+        <div id="dvMoonPos">            
             <p id="pMoonPos" class="white"></p>
         </div>
         <div id="dvZodiac">
             <p Id="pCnstltn" class="White"></p>
-            <figure class="spin" onclick="setTimeout(para2, 1000);">      
-                <img id = "imgZodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" onclick="spin()" 
+            <!-- onclick="setTimeout(spinClass, 1000);" -->
+            <figure class="spin" >      
+                <!-- <img id = "imgZodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" onclick="spin(5)" 
+                     alt="Error in Image Loading." > -->
+                <img id = "imgZodiac" src="..//Galexy-MoonStations/Resources/img/Zodiac.png" 
                      alt="Error in Image Loading." >
             </figure> 
         </div>
     </div>
-<body>
+
+    <body>
 
 </html>
